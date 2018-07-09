@@ -8,13 +8,12 @@
   ],
   "expected": {
     "compiled": {
-      "result": "error",
-      "errors": [
-        {
-          "key": "",
-          "error": "Expected at least one argument to be a string, number, boolean, or null, but found (value, value) instead."
-        }
-      ]
-    }
+      "result": "success",
+      "isFeatureConstant": false,
+      "isZoomConstant": true,
+      "type": "boolean"
+    },
+    "outputs": [false, false, true, true],
+    "serialized": ["!=", ["get", "x"], ["get", "y"]]
   }
 }

@@ -17,7 +17,14 @@ import Case from './case';
 import Step from './step';
 import Interpolate from './interpolate';
 import Coalesce from './coalesce';
-import Comparison from './comparison';
+import {
+    Equals,
+    NotEquals,
+    LessThan,
+    GreaterThan,
+    LessThanOrEqual,
+    GreaterThanOrEqual
+} from './comparison';
 import { CollatorExpression } from './collator';
 import Length from './length';
 
@@ -27,12 +34,12 @@ import type { ExpressionRegistry } from '../expression';
 
 const expressions: ExpressionRegistry = {
     // special forms
-    '==': Comparison,
-    '!=': Comparison,
-    '>': Comparison,
-    '<': Comparison,
-    '>=': Comparison,
-    '<=': Comparison,
+    '==': Equals,
+    '!=': NotEquals,
+    '>': GreaterThan,
+    '<': LessThan,
+    '>=': GreaterThanOrEqual,
+    '<=': LessThanOrEqual,
     'array': ArrayAssertion,
     'at': At,
     'boolean': Assertion,
